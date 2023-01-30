@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+</head>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row mainrow">
+            <div class="col-xl-4  d-md-none d-sm-none d-none"></div>
+            <div class="maincol col-xl-4 col-md-12 d-lg-block d-xl-block d-xxl-block">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Random <span>Password</span> Generator!</h1>
+                        <p class="card-text">Secured and Robust passwords to use across your accounts.</p>
+                        <form class="options">
+                            <label>Password Length: </label>
+                            <input type="number" class="pwlength" value='' placeholder="Default: 8 chars"><br>
+                            <input type="checkbox" id="specialchars">
+                            <label class="chkbox">Add Special Characters (%,& etc.) </label>
+                        </form>
+                        <button id="generatebtn" onclick="generatepw()">Generate Password</button>
+
+                        <div class="shape">
+                            <div class="line"></div>
+                        </div>
+                        <BR>
+                        <p>Click to copy to clipboard.</p>
+                        <div class="row pwarea">
+                            <div id="pwarea1" onclick="copytocp()" class="col-6">1st Password</div>
+                            <div id="pwarea2" onclick="copytocp()" class="col-6">2nd Password</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+
+                <p class="watermark"> Follow me on Github! <a href="https://github.com/bryeyyy">
+                    @bryeyyy 
+                </a> - 2023</p>
+            </div>
+            <div class="col-xl-4  d-md-none d-sm-none d-none"></div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
