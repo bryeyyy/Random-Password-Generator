@@ -39,16 +39,25 @@ function generatepw(){
    pw2form.textContent = pw2
 
 }
-function copytocp(){
-    var password1 = document.getElementById("pwarea1").textContent
-    var password2 = document.getElementById("pwarea2").textContent
 
-    if (password1 === "1st Password" && password2 === "2nd Password"){
+function copytocp1(){
+    var password1 = document.getElementById("pwarea1").textContent
+
+    if (password1 === "1st Password"){
         alert("Password not yet set. Press Generate Password to continue.")
     } else {
         navigator.clipboard.writeText(password1);
+        alert("Password Copied to Clipboard.")
+    }
+}
+
+function copytocp2(){
+    var password2 = document.getElementById("pwarea2").textContent
+
+    if (password2 === "2nd Password"){
+        alert("Password not yet set. Press Generate Password to continue.")
+    } else {
         navigator.clipboard.writeText(password2);
         alert("Password Copied to Clipboard.")
     }
-    
 }
